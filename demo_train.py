@@ -11,6 +11,5 @@ if __name__ == '__main__':
     model = YOLO('yolov8n.pt')
 
     results = model.train(data='huakuai_train.yaml',epochs=30,imgsz=312, device='0')
-
     results = model.val()
     success = model.export(format='onnx')
